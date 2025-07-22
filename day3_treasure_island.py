@@ -28,8 +28,10 @@ choice1 = input("You're at a cross road. Where do you want to go? Type 'left' or
 
 if choice1 == "left":
     # Second decision
-    choice2 = input("You've come to a lake. There is an island in the middle of the lake. "
-                    "Type 'wait' to wait for a boat. Type 'swim' to swim across: ").lower()
+    choice2 = input(
+        "You've come to a lake. There is an island in the middle of the lake. "
+        "Type 'wait' to wait for a boat. Type 'swim' to swim across: "
+    ).lower()
     if choice2 == "wait":
         # Third decision
         choice3 = input("You arrive at the island unharmed. "
