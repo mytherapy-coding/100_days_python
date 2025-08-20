@@ -20,4 +20,14 @@ for n in range(nr_numbers):
 print(random.shuffle(res))
 '''
 
-import string
+import random, string
+
+letters = string.ascii_letters
+numbers = string.digits
+symbols = string.punctuation
+
+print("Welcome to the PyPassword Generator!")
+nr_letters = int(input(f"How many letters would you like in your password?\n"))
+nr_symbols = int(input(f"How many symbols would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
+
