@@ -31,3 +31,14 @@ nr_letters = int(input(f"How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+
+l = random.choices(letters, k = nr_letters)
+print(l)
+n = random.choices(numbers, k = nr_numbers)
+print(n)
+s = random.choices(symbols, k = nr_symbols)
+print(s)
+res = l + n + s
+print(res)
+random.shuffle(res)
+print(res)
