@@ -35,27 +35,46 @@ while tries > 0:
 if tries == 0:
     print("Game over! The word was:", word)
 '''
-
+lives = 6
 word_list = ["artwark", "baboon", "camel"]
 
 word = random.choice(word_list)
+print(word)
 
-placeholder = ''
+correct_letters = []
+game_over = False
 
-for i in range(len(word)):
-    placeholder += "-"
-print(placeholder)
+while not game_over:
+    placeholder = ""
 
-guess = input("Guess a letter: ").lower()
+    for i in range(len(word)):
+        placeholder += "-"
+    print(placeholder)
 
-display = ''
+    guess = input("Guess a letter: ").lower()
 
-for letter in word:
-    if letter == guess:
-        display += letter
-    else:
-        display += "_"
+    display = ""
 
-print(display)
+    for letter in word:
+        if letter == guess:
+            display += letter
+            correct_letters.append(letter)
+        elif letter in correct_letters:
+            display += letter
+        else:
+            display += "_"
+
+    if guess not in word:
+        lives -= 1
+        if lives == 0:
+            game_over = True
+            print("You lose")
+    
+    if "_" not in display:
+        game_over = True 
+        print("You win")
+    
+
+    print(display)
 
 
