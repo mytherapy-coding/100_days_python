@@ -40,10 +40,22 @@ word_list = ["artwark", "baboon", "camel"]
 
 word = random.choice(word_list)
 
+placeholder = ''
+
+for i in range(len(word)):
+    placeholder += "-"
+print(placeholder)
+
 guess = input("Guess a letter: ").lower()
+
+display = ''
+
 for letter in word:
     if letter == guess:
-        print("Right")
+        display += letter
     else:
-        print("Wrong")
+        display += "_"
+
+print(display)
+
 
