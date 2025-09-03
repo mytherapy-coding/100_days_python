@@ -1,3 +1,4 @@
+'''
 def calculate_love_score(name1: str, name2: str) -> int:
     
     name1 = name1.lower()
@@ -25,6 +26,17 @@ def calculate_love_score(name1: str, name2: str) -> int:
     return res
 
 
-    
+print(calculate_love_score("Alena", "Amelie"))
+'''
+
+def calculate_love_score(name1: str, name2: str) -> str:
+    name1 = name1.lower()
+    name2 = name2.lower()
+    combined = name1 + name2
+
+    count1 = sum(1 for c in combined if c in "true")
+    count2 = sum(1 for c in combined if c in "love")
+
+    return str(count1) + str(count2)
 
 print(calculate_love_score("Alena", "Amelie"))
