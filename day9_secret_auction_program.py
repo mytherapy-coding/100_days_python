@@ -1,31 +1,27 @@
-auction_log = {}
-name = input("What's your name?:")
-bid = input("What is your bid?: $")
-auction_log[name] = bid
-new_bidder = input(f"Is there a new bidder? 'yes' or 'no:' ") 
-print(name)
-print(bid)
-print(new_bidder)
-print(auction_log)
+from art import logo
+print(logo)
 
 
-def winner():
-    list_values = []
-    for a in auction_log:
-        list_values.append(auction_log[a])
-    winner_found = max(list_values)
-    return winner_found
+def find_highest_bidder(bidding_record):
+    highest_bid = 0
+    winner = ""
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}")
 
 
-members = True
-
-while members:
-    if new_bidder == "yes".lower():
-        name = input("What's your name?:")
-        bid = input("What is your bid?: $")
-        auction_log[name] = bid
-        new_bidder = input("Is there a new bidder?" "yes or no?") 
-    else:
-        res =winner()
-        print(res)
-        members = False
+bids = {}
+continue_bidding = True
+while continue_bidding:
+    name = input("What is your name?: ")
+    price = int(input("What is your bid?: $"))
+    bids[name] = price
+    should_continue = input("Are there any other bidders? Type 'yes or 'no'.\n")
+    if should_continue == "no":
+        continue_bidding = False
+        find_highest_bidder(bids)
+    elif should_continue == "yes":
+        print("\n" * 20)
