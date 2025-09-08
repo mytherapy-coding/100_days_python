@@ -1,7 +1,3 @@
-from art import logo
-print(logo)
-
-
 def find_highest_bidder(bidding_record):
     highest_bid = 0
     winner = ""
