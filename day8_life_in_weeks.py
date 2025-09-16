@@ -1,11 +1,7 @@
-age = int(input("What is your age: "))
-
-
-def life_in_weeks(age: int):
+def life_in_weeks(age: int) -> int:
     return (90 - age) * 365 // 7
 
 
-weeks_left = life_in_weeks(40)
+your_age = int(input("What is your age: "))
+weeks_left = life_in_weeks(your_age)
 print(f"You have {weeks_left} weeks left")
-
-print((90 - age) * 52)

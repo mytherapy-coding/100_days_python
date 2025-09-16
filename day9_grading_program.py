@@ -2,8 +2,7 @@ student_scores = {"Harry": 88, "Ron": 78, "Hermione": 95, "Draco": 75, "Neville"
 
 student_grades = {}
 
-for s in student_scores:
-    score = student_scores[s]
+for s, score in student_scores.items():
     if 91 <= score <= 100:
         student_grades[s] = "Outstanding"
     elif 81 <= score <= 90:

@@ -10,17 +10,16 @@ def get_turns_by_difficulty():
         level = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
         if level == "easy":
             return EASY_LEVEL_TURNS
-        elif level == "hard":
+        if level == "hard":
             return HARD_LEVEL_TURNS
-        else:
-            print("Invalid choice. Please type 'easy' or 'hard'.")
+        print("Invalid choice. Please type 'easy' or 'hard'.")
 
 
 def compare_guess(user_guess, answer):
     """Return comparison result: 'high', 'low', or 'correct'."""
     if user_guess > answer:
         return "high"
-    elif user_guess < answer:
+    if user_guess < answer:
         return "low"
     return "correct"
 
@@ -49,7 +48,7 @@ def game():
         if result == "correct":
             print(f"🎉 You got it! The answer was {answer}.")
             return
-        elif result == "high":
+        if result == "high":
             print("Too high.")
         else:
             print("Too low.")

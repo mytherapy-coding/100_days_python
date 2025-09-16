@@ -24,11 +24,8 @@ def is_leap_year(year):
     2100 ÷ 100 = 21 (Not Leap)
     2100 ÷ 400 = 5.25 (Not Leap)
     """
-    """find the leap year"""
-    if year % 400 == 0 or year % 4 == 0 and year % 100 != 0:
-        return True
-    else:
-        return False
+
+    return year % 400 == 0 or year % 4 == 0 and year % 100 != 0
 
 
 print(is_leap_year(2024))
