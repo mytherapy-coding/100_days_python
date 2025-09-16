@@ -6,12 +6,12 @@ def is_prime(num):
     if num % 2 == 0:
         return False
 
-    for i in range(3, int(num ** 0.5) +1, 2):
+    for i in range(3, int(num**0.5) + 1, 2):
         if num % i == 0:
             return False
-    
+
     return True
-    '''    
+    """    
     def is_prime(num):
     if num <= 1:
         return False  # 1 or less is not prime
@@ -33,4 +33,4 @@ def is_prime(num):
     return True is on the same level as the for loop
     Why? Because we only know the number is prime **after checking all divisors**
     return True           # no divisors found → prime
-'''
+"""

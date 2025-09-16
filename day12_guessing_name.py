@@ -36,7 +36,7 @@ def game():
 
     while turns > 0:
         print(f"You have {turns} attempts remaining to guess the number.")
-        
+
         # Validate numeric input
         try:
             guess = int(input("Make a guess: "))

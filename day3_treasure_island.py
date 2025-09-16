@@ -1,4 +1,5 @@
-print('''
+print(
+    '''
 *******************************************************************************
           |                   |                  |                     |
  _________|________________.=""_;=.______________|_____________________|_______
@@ -19,12 +20,15 @@ ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
 ____/______/______/______/______/_____=._o._; | ;____/______/______/______/___
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
-''')
+'''
+)
 print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.") 
+print("Your mission is to find the treasure.")
 
 # First decision
-choice1 = input("You're at a cross road. Where do you want to go? Type 'left' or 'right': ").lower()
+choice1 = input(
+    "You're at a cross road. Where do you want to go? Type 'left' or 'right': "
+).lower()
 
 if choice1 == "left":
     # Second decision
@@ -34,9 +38,11 @@ if choice1 == "left":
     ).lower()
     if choice2 == "wait":
         # Third decision
-        choice3 = input("You arrive at the island unharmed. "
-                        "There is a house with 3 doors: one red, one yellow, and one blue. "
-                        "Which color do you choose? ").lower()
+        choice3 = input(
+            "You arrive at the island unharmed. "
+            "There is a house with 3 doors: one red, one yellow, and one blue. "
+            "Which color do you choose? "
+        ).lower()
         if choice3 == "yellow":
             print("You found the treasure! You Win! 🏆")
         elif choice3 == "red":

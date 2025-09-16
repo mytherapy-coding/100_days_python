@@ -1,5 +1,6 @@
 import random
-'''
+
+"""
 words = ["cat", "dog", "book", "car", "apple"]
 word = random.choice(words)
 
@@ -34,7 +35,7 @@ while tries > 0:
 
 if tries == 0:
     print("Game over! The word was:", word)
-'''
+"""
 lives = 6
 word_list = ["artwark", "baboon", "camel"]
 
@@ -69,12 +70,9 @@ while not game_over:
         if lives == 0:
             game_over = True
             print("You lose")
-    
+
     if "_" not in display:
-        game_over = True 
+        game_over = True
         print("You win")
-    
 
     print(display)
-
-

@@ -1,4 +1,4 @@
-'''
+"""
 import random
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -18,9 +18,10 @@ for s in range(nr_symbols):
 for n in range(nr_numbers):
     res += random.choice(numbers)
 print(random.shuffle(res))
-'''
+"""
 
-import random, string
+import random
+import string
 
 letters = string.ascii_letters
 numbers = string.digits
@@ -32,11 +33,11 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
-l = random.choices(letters, k = nr_letters)
+l = random.choices(letters, k=nr_letters)
 print(l)
-n = random.choices(numbers, k = nr_numbers)
+n = random.choices(numbers, k=nr_numbers)
 print(n)
-s = random.choices(symbols, k = nr_symbols)
+s = random.choices(symbols, k=nr_symbols)
 print(s)
 res = l + n + s
 print(res)
